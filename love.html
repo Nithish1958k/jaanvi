@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes for Jaanvi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+        }
+        .login-page, .birthday-page {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+        .login-page {
+            display: flex;
+            background-color: pink;
+            background-image: url('https://img.freepik.com/premium-vector/beautiful-bright-love-symbol-day-background_528152-14.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .birthday-page {
+            background-color: red;
+            background-image: url('https://img.freepik.com/free-vector/floating-bubble-hearts-banner-with-text-space_1017-29660.jpg?size=626&ext=jpg');
+            background-size: cover;
+            background-position: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+        .login-form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-form h2 {
+            margin-bottom: 20px;
+            color: #ff69b4;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ff69b4;
+            border-radius: 5px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ff69b4;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .birthday-page img {
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .birthday-message {
+            font-size: 24px;
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+        .love-matter {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #ffe4e1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-page" id="login-page">
+        <div class="login-form">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="checkLogin()">Login</button>
+        </div>
+    </div>
+
+    <div class="birthday-page" id="birthday-page">
+        <h1>Happy Birthday Jaanvi!</h1>
+        <img src="https://imagetolink.com/ib/4JqWtKsl4G.jpg" alt="Jaanvi">
+        <div class="birthday-message">Wishing you a day filled with love and joy!</div>
+        <div class="love-matter">
+            You are the light of my life. Every moment with you is a treasure. Your smile brightens up my world and your love fills my heart with happiness. 
+            I am so grateful to have you by my side, sharing every beautiful moment. Today, on your special day, I want you to know how much you mean to me.
+            You are my everything, and I promise to love you forever. I love you Jaanvi, my baby!
+        </div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (username === 'jaanvi' && password === 'loveyoubaby') {
+                document.getElementById('login-page').style.display = 'none';
+                document.getElementById('birthday-page').style.display = 'flex';
+            } else {
+                alert('Incorrect username or password');
+            }
+        }
+    </script>
+</body>
+</html>
+
